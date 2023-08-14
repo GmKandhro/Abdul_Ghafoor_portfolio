@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import Banner from '@/../public/about-banner.png'
+import Banner from '@/../public/About-banner.png'
 import Link from 'next/link'
 const page = () => {
   return (
