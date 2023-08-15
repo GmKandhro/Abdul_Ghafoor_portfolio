@@ -35,7 +35,7 @@ export const projects = [
       
       image: "/project-1.png",
       source_code_link: "https://github.com/GmKandhro/Gym-web-app",
-      liveDemo: 'https://gm-web-rho.vercel.app/',
+      liveDemo: 'https://gym-web-app-d91e.vercel.app/',
     },
     {
       name: "Fitness Web Application",
