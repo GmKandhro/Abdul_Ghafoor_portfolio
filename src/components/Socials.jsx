@@ -9,10 +9,10 @@ const Socials = ({className}) => {
   return (
     <div className={className}>
        
-        <Link href='/' className='text-[20px] sm:text-[25px] socails_color'><TbBrandFiverr/></Link>
-        <Link href='/' className='text-[20px] sm:text-[25px] socails_color'><FaGithubSquare/></Link>
-        <Link href='/' className='text-[20px] sm:text-[25px] socails_color'><BsFacebook/></Link>
-        <Link href='/' className='text-[20px] sm:text-[25px] socails_color'><BsLinkedin/></Link>
+        <Link href='http://surl.li/kchab' className='text-[20px] sm:text-[25px] socails_color' target='_blank'><TbBrandFiverr/></Link>
+        <Link href='https://github.com/GmKandhro' className='text-[20px] sm:text-[25px] socails_color' target='_blank'><FaGithubSquare/></Link>
+        <Link href='https://www.facebook.com/abdulghafoor.kandhro.790' className='text-[20px] sm:text-[25px] socails_color' target='_blank'><BsFacebook/></Link>
+        <Link href='https://www.linkedin.com' className='text-[20px] sm:text-[25px] socails_color' target='_blank'><BsLinkedin/></Link>
         
     </div>
   )

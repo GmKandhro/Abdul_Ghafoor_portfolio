@@ -11,7 +11,9 @@ const page = () => {
 
     emailjs.sendForm('service_2htfz8a', 'template_nejwnh3', form.current, 'Jv7msoEFYThkPQ3ds')
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
+        alert("Form Submited")
+        e.target.reset()
       }, (error) => {
           console.log(error.text);
       });
@@ -28,11 +30,11 @@ const page = () => {
     <div className="lg:w-[45%]  md:w-1/2 bg-[#454247] flex flex-col md:ml-auto w-full p-8 mt-8 md:mt-0 rounded-md">
       <h2 className="text-[#fff] text-lg mb-1 font-medium title-font">Contact Me</h2>
       <p className="leading-relaxed mb-5 text-[#ecebeb]">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+      <form action="" ref={form} onSubmit={sendEmail}>
       <div className="relative mb-4">
         <label htmlFor="name" className="leading-7 text-sm text-[#fff]">Name</label>
         <input type="text" id="name" name="from_name" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
       </div>
-      <form action="" ref={form} onSubmit={sendEmail}>
       <div className="relative mb-4">
         <label htmlFor="email" className="leading-7 text-sm text-[#fff]">Email</label>
         <input type="email" id="email" name="from_name" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />

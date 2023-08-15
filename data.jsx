@@ -21,13 +21,19 @@ export const links = [
         path: '/contact'
     }
 ]
-// import ing from "../public"
+import img1 from "./public/Project-1.png"
+import img2 from "./public/project-2.png"
+import img3 from "./public/Project-3.png"
+import img4 from "./public/Project-4.png"
+import img5 from "./public/Project-5.png"
+import img6 from "./public/Project-6.png"
+
 export const projects = [
     {
       name: "Gym web app",
       description:"This is the ecommerce store app which deails with clients to sell some thing.",
       
-      image: '/Project-1.png',
+      image: img1,
       source_code_link: "https://github.com/GmKandhro/Gym-web-app",
       liveDemo: 'https://gm-web-rho.vercel.app/',
     },
@@ -36,7 +42,7 @@ export const projects = [
       description:
         "This is the blog web app here is blogs about programming and much more for you try out it.",
       
-      image: '/Project-3.png',
+      image: img2,
       source_code_link: "https://github.com/GmKandhro/Fitness_Web-application",
       liveDemo: 'https://abgymdd.netlify.app/',
     },
@@ -45,7 +51,7 @@ export const projects = [
       description:
         "This is the blog web app here is blogs about programming and much more for you try out it.",
       
-      image: '/Project-2.png',
+      image: img3,
       source_code_link: "https://github.com/GmKandhro/gm-web",
       liveDemo: 'https://gm-web-rho.vercel.app/',
     },
@@ -55,16 +61,16 @@ export const Projects = [
       name: "Gym web app",
       description:"This is the ecommerce store app which deails with clients to sell some thing.",
       
-      image: '/Project-1.png',
+      image: img1,
       source_code_link: "https://github.com/GmKandhro/Gym-web-app",
-      liveDemo: 'https://gm-web-rho.vercel.app/',
+      liveDemo: 'https://gym-web-app-d91e.vercel.app/',
     },
     {
       name: "CarsHub Web app",
       description:
         "This is the blog web app here is blogs about programming and much more for you try out it.",
       
-      image: '/Project-2.png',
+      image: img2,
       source_code_link: "https://github.com/GmKandhro/gm-web",
       liveDemo: 'https://gm-web-rho.vercel.app/',
     },
@@ -73,7 +79,7 @@ export const Projects = [
       description:
         "This is the blog web app here is blogs about programming and much more for you try out it.",
       
-      image: '/Project-3.png',
+      image: img3,
       source_code_link: "https://github.com/GmKandhro/Fitness_Web-application",
       liveDemo: 'https://abgymdd.netlify.app/',
     },
@@ -82,7 +88,7 @@ export const Projects = [
       description:
         "This is the blog web app here is blogs about programming and much more for you try out it.",
       
-      image: '/Project-1.png',
+      image: img4,
       source_code_link: "https://github.com/",
       liveDemo: 'https://gm-web-rho.vercel.app/',
     },
@@ -91,7 +97,7 @@ export const Projects = [
       description:
         "This is the blog web app here is blogs about programming and much more for you try out it.",
       
-      image: '/Project-1.png',
+      image:img5,
       source_code_link: "https://github.com/",
       liveDemo: 'https://gm-web-rho.vercel.app/',
     },
@@ -100,7 +106,7 @@ export const Projects = [
       description:
         "This is the blog web app here is blogs about programming and much more for you try out it.",
       
-      image: '/Project-1.png',
+      image: img6,
       source_code_link: "https://github.com/",
       liveDemo: 'https://gm-web-rho.vercel.app/',
     },
