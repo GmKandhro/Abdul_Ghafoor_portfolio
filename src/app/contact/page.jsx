@@ -2,9 +2,24 @@
 import React from 'react'
 import { useRef} from 'react';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+ import 'react-toastify/dist/ReactToastify.css';
 const page = () => {
 
   const form = useRef()
+
+   const notify = () =>{
+    toast.success(' Form Submited!', {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
+  }
 
   const sendEmail = (e) => {
         e.preventDefault();
@@ -12,7 +27,7 @@ const page = () => {
     emailjs.sendForm('service_2htfz8a', 'template_nejwnh3', form.current, 'Jv7msoEFYThkPQ3ds')
       .then((result) => {
         console.log(result.text);
-        alert("Form Submited")
+        notify()
         e.target.reset()
       }, (error) => {
           console.log(error.text);
@@ -21,6 +36,7 @@ const page = () => {
 
   return (
     <div>
+       <ToastContainer/>
         <section className="text- body-font relative">
   <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
     <div className="lg:w-[50%] md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -29,7 +45,7 @@ const page = () => {
     </div>
     <div className="lg:w-[45%]  md:w-1/2 bg-[#454247] flex flex-col md:ml-auto w-full p-8 mt-8 md:mt-0 rounded-md">
       <h2 className="text-[#fff] text-lg mb-1 font-medium title-font">Contact Me</h2>
-      <p className="leading-relaxed mb-5 text-[#ecebeb]">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+      <br />
       <form action="" ref={form} onSubmit={sendEmail}>
       <div className="relative mb-4">
         <label htmlFor="name" className="leading-7 text-sm text-[#fff]">Name</label>
@@ -43,9 +59,9 @@ const page = () => {
         <label htmlFor="message" className="leading-7 text-sm text-[#fff]">Message</label>
         <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
       </div>
-      <button type='submit' className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+      <button type='submit'  className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
       </form>
-      <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+     
     </div>
   </div>
 </section>
