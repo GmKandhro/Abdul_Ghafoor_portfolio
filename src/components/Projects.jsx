@@ -4,6 +4,7 @@ import Image from 'next/image'
 import {projects} from "../../data"
 import Link from 'next/link'
 import {AiOutlineGithub} from "react-icons/ai"
+import TruncateText from '@/app/portfolio/practice'
 
 
 const Projects = () => {
@@ -16,15 +17,14 @@ const Projects = () => {
             projects.map((item, index)=>{
                 return(
 
-               
+                  
                  <div key={index} className='w-[300px]  bg-[#333233] cursor-default transition-all  ease-in duration-300 hover:bg-[gray] p-2 rounded-[20px] '>
-                <div className="relative object-cover  ">
+                <div className="relative h-[150px] ">
                         <Image
                         src={item.image}
-                          width={400}
-                          height={300}
+                          fill={true}
                         alt="Car Rent"
-                        className=" object-cover rounded-2xl"
+                        className=" rounded-2xl"
                         />
                         <Link href={item.source_code_link} target='_blank' className='absolute top-[10px] right-[20px] z-10 w-[30px] h-[30px] rounded-full bg-black flex items-center justify-center'>
                             <AiOutlineGithub/>
@@ -32,7 +32,8 @@ const Projects = () => {
                     </div>
                     <div className='ml-[8px] mb-5'>
                         <h1 className='text-[1rem] md:text-[1rem] mt-[10px] mb-[15px] font-medium color-primary'>{item.name}</h1>
-                        <p className='mb-6 font-thin  text-[13px] sm:text-[16px] '>{item.description}</p>
+                        {/* <p className='mb-6 font-thin  text-[13px] sm:text-[16px] '>{item.description}</p> */}
+                        <TruncateText className='mb-6 font-thin  text-[13px] sm:text-[16px] ' text={item.description} maxWords={12}/>
                         <Link href={item.liveDemo} target='_blank' className='py-2 px-6 rounded-lg bg-[#5A3427] mb-5'>Live Demo</Link>
 
                     </div>

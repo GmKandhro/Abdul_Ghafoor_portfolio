@@ -9,9 +9,9 @@ const page = () => {
   const form = useRef()
 
    const notify = () =>{
-    toast.success(' Form Submited!', {
-      position: "top-right",
-      autoClose: 3000,
+    toast.success(' Form Submited !', {
+      position: "bottom-right",
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -26,7 +26,7 @@ const page = () => {
 
     emailjs.sendForm('service_2htfz8a', 'template_nejwnh3', form.current, 'Jv7msoEFYThkPQ3ds')
       .then((result) => {
-        console.log(result.text);
+        console.log(result);
         notify()
         e.target.reset()
       }, (error) => {
@@ -48,7 +48,7 @@ const page = () => {
       <br />
       <form action="" ref={form} onSubmit={sendEmail}>
       <div className="relative mb-4">
-        <label htmlFor="name" className="leading-7 text-sm text-[#fff]">Name</label>
+        <label htmlFor="name" className="leading-7 text-sm text-[#fff]" required>Name</label>
         <input type="text" id="name" name="from_name" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
       </div>
       <div className="relative mb-4">
@@ -57,7 +57,7 @@ const page = () => {
       </div>
       <div className="relative mb-4">
         <label htmlFor="message" className="leading-7 text-sm text-[#fff]">Message</label>
-        <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+        <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
       </div>
       <button type='submit'  className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
       </form>

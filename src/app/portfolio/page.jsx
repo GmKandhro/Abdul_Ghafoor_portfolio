@@ -1,10 +1,13 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import {Projects} from "@/../data"
 import Image from 'next/image'
 import {AiOutlineGithub} from "react-icons/ai"
 import Link from 'next/link'
 import Banner from '@/../public/portfolio.jpg'
+import TruncateText from './practice'
 const page = () => {
+  
   return (
     <div className=' '>
         <div className=''>
@@ -21,14 +24,13 @@ const page = () => {
                 return(
 
                
-                 <div key={index} className='w-[300px]  bg-[#333233] cursor-default transition-all  ease-in duration-300 hover:bg-[gray] p-2 rounded-[20px] '>
-                <div className="relative object-cover  ">
+                 <div key={index} className='w-[300px] min-h-[300px]  bg-[#333233] cursor-default transition-all  ease-in duration-300 hover:bg-[gray] p-2 rounded-[20px] '>
+                <div className="relative h-[150px] object-cover object-center ">
                         <Image
                         src={item.image}
-                          width={400}
-                          height={300}
+                          fill={true}
                         alt="Car Rent"
-                        className=" object-cover rounded-2xl"
+                        className="  rounded-2xl"
                         />
                         <Link href={item.source_code_link} target='_blank' className='absolute top-[10px] right-[20px] z-10 w-[30px] h-[30px] rounded-full bg-black flex items-center justify-center'>
                             <AiOutlineGithub/>
@@ -36,8 +38,9 @@ const page = () => {
                     </div>
                     <div className='ml-[8px] mb-5'>
                         <h1 className='text-[1.2rem] mt-[10px] mb-[15px] font-medium color-primary'>{item.name}</h1>
-                        <p className='mb-6 font-thin '>{item.description}</p>
-                        <Link href={item.liveDemo} target='_blank' className='py-2 px-6 rounded-lg bg-[#5A3427] mb-5'>Live Demo</Link>
+                        {/* <p className='mb-6 font-thin '>{item.description}</p> */}
+                        <TruncateText className="mb-6 font-thin "  text={item.description} maxWords={10}/>
+                        <Link href={item.liveDemo} target='_blank' className=' mt-6 py-2 px-6 rounded-lg bg-[#5A3427] mb-5'>Live Demo</Link>
 
                     </div>
                 </div>
