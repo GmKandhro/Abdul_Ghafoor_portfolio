@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Logo from "../../public/logo1.png"
 import {AiOutlineClose} from 'react-icons/ai'
 import {HiMenuAlt3} from 'react-icons/hi'
+// import DarkModeToggle from './ThemeMode/DarkModeToggle'
 export const Navbar = () => {
 
   const [isNavShowing, setIsNavShowing] = useState(false)
@@ -24,6 +25,8 @@ export const Navbar = () => {
             ))
             }
         </ul>
+
+        {/* <DarkModeToggle/> */}
         
         <button className='nav__toggle-btn' onClick={()=> setIsNavShowing(prev => !prev)}>
           {

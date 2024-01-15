@@ -53,7 +53,7 @@ export const projects = [
       
       image:"/project-3.png",
       source_code_link: "https://github.com/GmKandhro/gm-web",
-      liveDemo: 'https://gm-web-rho.vercel.app/',
+      liveDemo: 'https://abgymdd.netlify.app/',
     },
 ]
 export const Projects = [
@@ -71,8 +71,8 @@ export const Projects = [
         "This is the blog web app here is blogs about programming and much more for you try out it.",
       
       image:"/project-2.png",
-      source_code_link: "https://github.com/GmKandhro/gm-web",
-      liveDemo: 'https://gm-web-rho.vercel.app/',
+      source_code_link: "#",
+      liveDemo: '#',
     },
     {
       name: "Fitness Web Application",
@@ -90,7 +90,7 @@ export const Projects = [
       
       image: "/project-4.png",
       source_code_link: "https://github.com/",
-      liveDemo: 'https://gm-web-rho.vercel.app/',
+      liveDemo: '#',
     },
     {
       name: "Blog web app",
